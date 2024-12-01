@@ -8,12 +8,15 @@ import axios from 'axios'
 
 function Freebook() {
 
+  // const host = 'http://localhost:4001';
+  const host = 'https://bookstorebackend-e8hi.onrender.com';
+
   const [book, setBook] = useState([]);
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get('http://localhost:4001/book');
-       const data = res.data.filter((data) => data.category === "Free")
+        const res = await axios.get(`${host}/book`);
+        const data = res.data.filter((data) => data.category === "Free")
         setBook(data);
       } catch (error) {
         console.log(error);

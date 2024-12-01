@@ -6,6 +6,10 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 function Signup() {
+
+    // const host = 'http://localhost:4001';
+    const host = 'https://bookstorebackend-e8hi.onrender.com';
+
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || '/';
@@ -21,7 +25,7 @@ function Signup() {
       email: data.email,
       password: data.password,
     }
-    await axios.post('http://localhost:4001/user/signup', userInfo)
+    await axios.post(`${host}/user/signup`, userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
