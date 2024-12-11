@@ -5,6 +5,7 @@ import Courses from "./courses/Courses";
 import Signup from "./components/Signup";
 import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from "./context/AuthProvider";
+import Contacts from "./contact/Contacts";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/course" element={<ProtectedRoute>  <Courses /> </ProtectedRoute>} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/contact" element={<Contacts />} />
         </Routes>
         <Toaster />
       </div>
