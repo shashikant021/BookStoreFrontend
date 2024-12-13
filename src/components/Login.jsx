@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 function Login() {
 
     // const host = 'http://localhost:4001';
-    const host = 'https://bookstorebackend-e8hi.onrender.com';
+    const host = 'https://bookstorebackend-xxu8.onrender.com';
 
   const {
     register,
@@ -50,14 +50,16 @@ function Login() {
             <Link
               to="/"
               className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-              onClick={() => document.getElementById("my_modal_3").close()}
+              onClick={() => {document.getElementById("my_modal_3").close();
+                window.location.reload();
+              }}
             >
               ✕
             </Link>
 
-            <h3 className="font-bold text-lg">Login</h3>
+            <h3 className="font-bold text-lg text-center">Login</h3>
             {/* Email */}
-            <div className="mt-4 space-y-2">
+            <div className="mt-4 space-y-2 lg:pl-12">
               <span>Email</span>
               <br />
               <input
@@ -74,7 +76,7 @@ function Login() {
               )}
             </div>
             {/* password */}
-            <div className="mt-4 space-y-2">
+            <div className="mt-4 space-y-2 lg:pl-12">
               <span>Password</span>
               <br />
               <input

@@ -1,6 +1,5 @@
 import React from "react";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
-import Login from "./Login";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -8,7 +7,7 @@ import toast from "react-hot-toast";
 function Signup() {
 
     // const host = 'http://localhost:4001';
-    const host = 'https://bookstorebackend-e8hi.onrender.com';
+    const host = 'https://bookstorebackend-xxu8.onrender.com';
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -46,7 +45,7 @@ function Signup() {
   return (
     <>
       <div className="flex h-screen items-center justify-center dark:bg-slate-800 dark:text-white">
-        <div className=" w-[600px]  ">
+        <div className=" lg:w-[600px] w-[500px] ">
           <div className="modal-box dark:bg-slate-700 dark:text-white">
             <form className="dark:bg-slate-700 dark:text-white"
               onSubmit={handleSubmit(onSubmit)} method="dialog">
@@ -58,14 +57,14 @@ function Signup() {
                 ✕
               </Link>
 
-              <h3 className="font-bold text-lg">Signup</h3>
-              <div className="mt-4 space-y-2">
+              <h3 className="font-bold text-lg text-center">Signup</h3>
+              <div className="mt-4 space-y-2 lg:pl-10 pl-4">
                 <span>Name</span>
                 <br />
                 <input
                   type="text"
                   placeholder="Enter your fullname"
-                  className="w-80 px-3 py-1 border rounded-md outline-none dark:bg-slate-700 dark:text-white"
+                  className="lg:w-96 w-72 px-3 py-1 border rounded-md outline-none dark:bg-slate-700 dark:text-white"
                   {...register("fullname", { required: true })}
                 />
                 <br />
@@ -76,13 +75,13 @@ function Signup() {
                 )}
               </div>
               {/* Email */}
-              <div className="mt-4 space-y-2">
+              <div className="mt-4 space-y-2 lg:pl-10 pl-4">
                 <span>Email</span>
                 <br />
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-80 px-3 py-1 border rounded-md outline-none dark:bg-slate-700 dark:text-white"
+                  className="lg:w-96 w-72 px-3 py-1 border rounded-md outline-none dark:bg-slate-700 dark:text-white"
                   {...register("email", { required: true })}
                 />
                 <br />
@@ -93,13 +92,13 @@ function Signup() {
                 )}
               </div>
               {/* Password */}
-              <div className="mt-4 space-y-2">
+              <div className="mt-4 space-y-2 lg:pl-10 pl-4">
                 <span>Password</span>
                 <br />
                 <input
                   type="text"
                   placeholder="Enter your password"
-                  className="w-80 px-3 py-1 border rounded-md outline-none dark:bg-slate-700 dark:text-white"
+                  className="lg:w-96 w-72 px-3 py-1 border rounded-md outline-none dark:bg-slate-700 dark:text-white"
                   {...register("password", { required: true })}
                 />
                 <br />
