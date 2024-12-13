@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 function Contact() {
 
     // const host = 'http://localhost:4001';
-    const host = 'https://bookstorebackend-xxu8.onrender.com';
+    const host = 'https://bookstorebackend-xbff.onrender.com';
 
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
