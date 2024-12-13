@@ -5,7 +5,7 @@ import axios from 'axios'
 function Course() {
 
     // const host = 'http://localhost:4001';
-    const host = 'https://bookstorebackend-e8hi.onrender.com';
+    const host = 'https://bookstorebackend-xxu8.onrender.com';
 
   const [book, setBook] = useState([]);
   useEffect(() => {
@@ -42,7 +42,7 @@ function Course() {
             </button>
           </Link>
         </div>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {book.map((item) => (
             <Cards key={item.id} item={item} />
           ))}
