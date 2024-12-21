@@ -46,22 +46,22 @@ function Contact() {
                         <h1 className='text-center text-xl lg:p-4 p-1'>Leave a Message</h1>
                         <div className='lg:pl-8'>
                             <div className='m-2'>
-                                <div><label>Name :</label></div>
-                                <input type="text" placeholder="Your Name"
+                                <div><label>Name </label></div>
+                                <input type="text" placeholder="Name..."
                                     minLength={4} required
                                     className="lg:w-96 w-80 px-4 py-2 border outline-none  rounded-md dark:bg-slate-700 dark:text-white"
                                     {...register('name', { required: true })} />
                             </div>
                             <div className='m-2 mt-4'>
-                                <div><label>Email :</label></div>
-                                <input type="email" placeholder="Your Email id"
+                                <div><label>Email </label></div>
+                                <input type="email" placeholder="Email id"
                                     required
                                     className="lg:w-96 w-80 px-4 py-2 border outline-none rounded-md dark:bg-slate-700 dark:text-white"
                                     {...register('email', { required: true })} />
                             </div>
                             <div className='m-2 mt-4'>
-                                <div><label>Contact :</label></div>
-                                <input type="number" placeholder="Your Contact Number" required
+                                <div><label>Contact </label></div>
+                                <input type="number" placeholder="Contact Number" required
                                     className="lg:w-96 w-80 px-4 py-2 border outline-none rounded-md dark:bg-slate-700 dark:text-white"
                                     {...register('contact', { required: true, minLength: 10, maxLength: 10 })} />
                                 {errors.contact && (
@@ -71,14 +71,14 @@ function Contact() {
                                 )}
                             </div>
                             <div className='m-2 mt-4'>
-                                <div><label>Subject :</label></div>
+                                <div><label>Subject </label></div>
                                 <input type="text" placeholder="Related to..."
                                     minLength={5} required
                                     className="lg:w-96 w-80 px-4 py-2 border outline-none  rounded-md dark:bg-slate-700 dark:text-white"
                                     {...register('subject', { required: true })} />
                             </div>
                             <div className='m-2 mt-4'>
-                                <div><label>Message :</label></div>
+                                <div><label>Message </label></div>
                                 <textarea
                                     className="textarea textarea-bordered lg:w-96 w-80 px-4 py-2 border outline-none  rounded-md dark:bg-slate-700 dark:text-white "
                                     placeholder="Write Your Query Here" {...register('message', { required: true })}
